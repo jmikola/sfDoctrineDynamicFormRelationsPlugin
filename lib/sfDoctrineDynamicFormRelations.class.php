@@ -232,7 +232,6 @@ class sfDoctrineDynamicFormRelations extends sfForm
       else
       {
         $object = $config['relation']->getTable()->create();
-        $object->fromArray($value);
         $form->getObject()->get($config['relation']->getAlias())->add($object);
 
         $child = $r->newInstanceArgs(array_merge(array($object), $config['arguments']));
